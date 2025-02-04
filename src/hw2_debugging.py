@@ -8,6 +8,9 @@ def merge_sort(unsorted_arr):
     Merge sort implementation that takes in an unsorted array and outputs a sorted one.
     """
 
+    if not unsorted_arr:
+        return unsorted_arr
+
     if len(unsorted_arr) == 1:
         return unsorted_arr
 
