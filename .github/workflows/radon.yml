@@ -1,10 +1,10 @@
-name: actions
+name: Radon Runner
 
 on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
 
     steps:
       # Step 1: Check out the repository
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Use the latest Python 3.x version
+          python-version: "3.x" # Use the latest Python 3.x version
 
       # Step 3: Install dependencies
       - name: Install dependencies

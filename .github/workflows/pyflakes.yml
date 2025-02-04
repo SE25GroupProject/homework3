@@ -1,4 +1,4 @@
-name: actions
+name: Pyflakes Runner
 
 on: [push, pull_request]
 
