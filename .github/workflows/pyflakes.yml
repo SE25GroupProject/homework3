@@ -23,6 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Run radon
+      # Step 4: Run pyflakes
+      #- name: Pyflakes Syntax Checker
+      # uses: lgeiger/pyflakes-action@v1.0.1
+
+      # Step 4: Run pyflakes
       - name: Run pyflakes
-        run: pyflakes **/*.py # all python files
+        run: pyflakes . # all python files
