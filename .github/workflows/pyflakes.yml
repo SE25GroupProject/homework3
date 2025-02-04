@@ -29,4 +29,4 @@ jobs:
 
       # Step 4: Run pyflakes
       - name: Run pyflakes
-        run: pyflakes **/ # all python files
+        run: pyflakes . # all python files
