@@ -1,3 +1,5 @@
+"""Test file for merge sort. Tests on an empty array, an array with one item, and a large array."""
+
 import hw2_debugging
 import rand
 
@@ -26,5 +28,3 @@ def test_large_array():
     for idx, num in enumerate(returned_arr):
         if idx != len(returned_arr) - 1:
             assert num <= returned_arr[idx + 1]
-
-
