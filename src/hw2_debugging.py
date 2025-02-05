@@ -23,7 +23,6 @@ def recombine(left_arr, right_arr):
         else:
             merge_arr[left_index + right_index] = right_arr[right_index]
             right_index += 1
-
             merge_arr[left_index + right_index] = right_arr[right_index]
             right_index += 1
 
