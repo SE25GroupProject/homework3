@@ -23,7 +23,12 @@ def recombine(left_arr, right_arr):
         else:
             merge_arr[left_index + right_index] = right_arr[right_index]
             right_index += 1
+            merge_arr[left_index + right_index] = right_arr[right_index]
+            right_index += 1
 
+    while right_index < len(right_arr):
+        merge_arr[left_index + right_index] = right_arr[right_index]
+        right_index += 1
     while right_index < len(right_arr):
         merge_arr[left_index + right_index] = right_arr[right_index]
         right_index += 1
@@ -44,6 +49,7 @@ arr = random_array([None] * 20)
 
 print(arr)
 
+arr_out = merge_sort(arr)
 arr_out = merge_sort(arr)
 
 print(arr_out)
