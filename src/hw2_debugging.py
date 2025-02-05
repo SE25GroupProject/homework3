@@ -1,27 +1,18 @@
-"""Module providing two sorting functions."""
+"""Homework 2 file for debugging and cleaning up"""
 
-import rand
+from rand import random_array
 
+def merge_sort(array):
+    """Used to merge sort the array"""
+    if len(array) == 1:
+        return array
 
-def merge_sort(unsorted_arr):
-    """
-    Merge sort implementation that takes in an unsorted array and outputs a sorted one.
-    """
+    half = len(array)//2
 
-    if not unsorted_arr:
-        return unsorted_arr
-
-    if len(unsorted_arr) == 1:
-        return unsorted_arr
-
-    half = len(unsorted_arr)//2
-
-    return recombine(merge_sort(unsorted_arr[:half]), merge_sort(unsorted_arr[half:]))
-
+    return recombine(merge_sort(array[:half]), merge_sort(array[half:]))
 
 def recombine(left_arr, right_arr):
-    """The function that recombines the array during merge sort."""
-
+    """Used to recombine the array"""
     left_index = 0
     right_index = 0
     merge_arr = [None] * (len(left_arr) + len(right_arr))
@@ -33,6 +24,12 @@ def recombine(left_arr, right_arr):
             merge_arr[left_index + right_index] = right_arr[right_index]
             right_index += 1
 
+            merge_arr[left_index + right_index] = right_arr[right_index]
+            right_index += 1
+
+    while right_index < len(right_arr):
+        merge_arr[left_index + right_index] = right_arr[right_index]
+        right_index += 1
     while right_index < len(right_arr):
         merge_arr[left_index + right_index] = right_arr[right_index]
         right_index += 1
@@ -58,8 +55,6 @@ arr_out = merge_sort(arr)
 
 print("Array Using Merge Sort")
 print(arr_out)
-print()
-
 
 def selection_sort(unsorted_arr):
     """An implementation of Selection sort that takes an unsorted
@@ -82,7 +77,7 @@ def selection_sort(unsorted_arr):
 
     return sorted_arr
 
-arr = rand.random_array([None] * 20)
+arr = random_array([None] * 20)
 
 print("Unsorted Array")
 print(arr)

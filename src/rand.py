@@ -3,8 +3,15 @@
 import random
 
 def random_array(arr):
-    """takes in an empty array and fills it with random numbers from 1 to 20"""
-    for item in enumerate(arr):
-        i = item[0]
+    """
+    Fills an array with random integers between 1 and 20.
+
+    Args:
+        arr (list): The array to be filled with random integers.
+
+    Returns:
+        list: The array filled with random integers.
+    """
+    for i, _ in enumerate(arr):
         arr[i] = random.randint(1, 20)
     return arr
