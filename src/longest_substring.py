@@ -24,6 +24,5 @@ def length_of_longest_substring(s: str) -> int:
                 l += 1
             l += 1
         r += 1
-        if len(chars) > record:
-            record = len(chars)
+        record = max(record, len(chars))  # Updated line
     return record

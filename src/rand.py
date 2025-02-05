@@ -1,6 +1,4 @@
-"""
-Module for generating random arrays.
-"""
+"""The file that helps create an array of numbers with values from 1 to 20."""
 
 import random
 

@@ -47,9 +47,39 @@ def recombine(left_arr, right_arr):
 
 arr = random_array([None] * 20)
 
+print("Unsorted Array:")
 print(arr)
 
 arr_out = merge_sort(arr)
-arr_out = merge_sort(arr)
 
+print("Array Using Merge Sort")
 print(arr_out)
+
+def selection_sort(unsorted_arr):
+    """An implementation of Selection sort that takes an unsorted
+    array and returns a sorted one."""
+
+    sorted_arr = unsorted_arr
+
+    for num in enumerate(sorted_arr):
+        i = num[0]
+        smallest_idx = i
+
+        for j in range(i, len(sorted_arr)):
+
+            if sorted_arr[j] < sorted_arr[smallest_idx]:
+                smallest_idx = j
+
+        temp = sorted_arr[i]
+        sorted_arr[i] = sorted_arr[smallest_idx]
+        sorted_arr[smallest_idx] = temp
+
+    return sorted_arr
+
+arr = random_array([None] * 20)
+
+print("Unsorted Array")
+print(arr)
+
+print("Array sorted with Selection Sort")
+print(selection_sort(arr))
