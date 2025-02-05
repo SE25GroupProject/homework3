@@ -1,4 +1,7 @@
-import pytest
+"""
+Module for testing the merge_sort function from hw2_debugging.
+"""
+
 from hw2_debugging import merge_sort
 
 def test_merge_sort_empty_array():
